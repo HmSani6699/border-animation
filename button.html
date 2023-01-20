@@ -8,10 +8,55 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(121, 109, 94);
+        }
+
+        .container {
+            height: 400px;
+            width: 400px;
+            border: 2px solid red;
+            background-color: rgba(0, 255, 255, 0.478);
+            position: relative;
+
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: burlywood;
+            transition: all 0.5s;
+            position: absolute;
+
+        }
+
+        .top {
+            width: 400px;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .container:hover .top {
+            height: 400px;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="box top">
+            <h1>Top to Bottom</h1>
+        </div>
+    </div>
 </body>
 
 </html>
