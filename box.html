@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: black;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .box::before {
+            content: "";
+            height: 150%;
+            width: 100px;
+            background-color: blueviolet;
+            position: absolute;
+            animation: rounded 4s linear infinite;
+        }
+
+        .box::after {
+            content: "";
+            inset: 5px;
+            background-color: black;
+            position: absolute;
+            border-radius: 10px;
+        }
+
+        @keyframes rounded {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+        </div>
+    </div>
+</body>
+
+</html>
